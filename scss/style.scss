@@ -6,8 +6,11 @@ $gap-paragraph: 18rem;
 $box-shadow:  0px 4px 10px rgba(0, 0, 0, 0.2);
 $titles-border: 0.15rem;
 
-
-html {/*etiqueta raiz*/ font-size: 62.5%;}
+.mobile {
+    display: none;
+} 
+html {/*etiqueta raiz*/ font-size: 62.5%;
+    scroll-behavior: smooth;}
 
 body {font-family: $body-font;
     background-color:$color-white;
@@ -35,6 +38,8 @@ body {font-family: $body-font;
  background-color: $color-white;
  display: block;
 }
+
+
  
 h1{
     font-family: $title-font;
@@ -106,6 +111,13 @@ transform: translate(.5rem, .5rem);}
         }
 }
 
+
+.card {
+    width: 100px;
+    height: 120px;
+    border: $titles-border;
+
+}
 .footer {
     background-color:$color-green;
      align-items:center;
@@ -221,24 +233,91 @@ li {
   
  
  @media only screen and (max-width: 1024px) {
+    .hide {
+        display: none;
+    }
+    .mobile {
+        display: inline-block;
+    }
+    body {
+        margin-left: 16px;
+       
+    }
 
+    h1 span { font-family: $title-font;
+        color: $color-white;
+        font-size: 6rem;
+        -webkit-text-stroke-width: $titles-border;
+            -webkit-text-stroke-color: $color-green;
+            line-height: 0px;
+           
+    }
+    h1  { font-family: $title-font;
+        color: $color-white;
+        font-size: 6rem;
+        -webkit-text-stroke-width: $titles-border;
+            -webkit-text-stroke-color: $color-green;
+            line-height: 70px;
+           
+    }
+
+h2 {
+
+    font-size: 4rem;
+}
+    
+    p {
+        font-size: 2rem;
+    }
+
+    .scale-photo {
+        width: 100%;
+        height: auto;
+        align-items: center;
+        position:relative;
+    
+    }
+    
+    .plant {
+        display:none; 
+    }
     label{
 
         display: block;
         cursor: pointer;
-        align-items: flex-end;
     }
+
+    .projects-img {
+position: relative;
+align-items: center;
+    }
+
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        height: 30px;
+        width: 30px;
+        outline:$color-orange;
+        background-color:$color-orange;
+        background-size: 50%, 50%;
+        border-radius: 50%;}
+
+        .card {
+
+        width: 100px;
+        height: 100px;
+        margin-bottom: 50px;
+        }
     .menu{
 
-        text-align:center;
+        text-align:left;
         width: 100%;
         display: none;
 padding: 0px;
 background-color: $color-white;
+box-shadow: 0px 40px 80px rgba(0, 0, 0, 0.2);
     }
 
     .menu a {
-        display: block;
+        display: inline-block;
         border-bottom:  solid $color-orange
         margin 0px;
     }
@@ -248,3 +327,8 @@ background-color: $color-white;
 
         display: block;
       }
+
+      li {
+        margin-top: 0px;
+       }
+      

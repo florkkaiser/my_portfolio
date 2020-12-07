@@ -1,6 +1,10 @@
+.mobile {
+  display: none; }
+
 html {
   /*etiqueta raiz*/
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
 
 body {
   font-family: "Poppins", sans-serif;
@@ -87,6 +91,11 @@ h3 {
   .projects:hover {
     color: #E25043;
     -webkit-text-stroke-width: 0px; }
+
+.card {
+  width: 100px;
+  height: 120px;
+  border: 0.15rem; }
 
 .footer {
   background-color: #034D44;
@@ -243,19 +252,67 @@ h1 span:nth-child(20) {
   box-sizing: border-box; }
 
 @media only screen and (max-width: 1024px) {
+  .hide {
+    display: none; }
+  .mobile {
+    display: inline-block; }
+  body {
+    margin-left: 16px; }
+  h1 span {
+    font-family: "Proza Libre", sans-serif;
+    color: #FFFBF2;
+    font-size: 6rem;
+    -webkit-text-stroke-width: 0.15rem;
+    -webkit-text-stroke-color: #034D44;
+    line-height: 0px; }
+  h1 {
+    font-family: "Proza Libre", sans-serif;
+    color: #FFFBF2;
+    font-size: 6rem;
+    -webkit-text-stroke-width: 0.15rem;
+    -webkit-text-stroke-color: #034D44;
+    line-height: 70px; }
+  h2 {
+    font-size: 4rem; }
+  p {
+    font-size: 2rem; }
+  .scale-photo {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    position: relative; }
+  .plant {
+    display: none; }
   label {
     display: block;
-    cursor: pointer;
-    align-items: flex-end; }
+    cursor: pointer; }
+  .projects-img {
+    position: relative;
+    align-items: center; }
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 30px;
+    width: 30px;
+    outline: #E25043;
+    background-color: #E25043;
+    background-size: 50%, 50%;
+    border-radius: 50%; }
+  .card {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 50px; }
   .menu {
-    text-align: center;
+    text-align: left;
     width: 100%;
     display: none;
     padding: 0px;
-    background-color: #FFFBF2; }
+    background-color: #FFFBF2;
+    box-shadow: 0px 40px 80px rgba(0, 0, 0, 0.2); }
   .menu a {
-    display: block;
+    display: inline-block;
     border-bottom: solid #E25043 margin 0px; } }
 
 #toggle:checked + .menu {
   display: block; }
+
+li {
+  margin-top: 0px; }
